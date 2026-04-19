@@ -1,20 +1,33 @@
-.container {
-  height: 96vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: #f0f2f5;
-}
 html, body {
   height: 100%;
   margin: 0;
 }
 
+
+.container {
+ position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh; /* Viewport height */  
+  /* 2. Centering Logic */
+  display: flex;
+  justify-content: center; /* Horizontal center */
+  align-items: center;     /* Vertical center */
+  
+  z-index: 1000;           /* Sit on top of everything */
+  overflow: hidden; 
+  background-color: #f0f2f5;
+}
 .card {
-  width: 350px;
-  padding: 25px;
-  border-radius: 12px;
-  background: white;
+ background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+  width: 100%;
+  max-width: 400px;        /* Responsive width */
+  margin: 20px;            /* Safety margin for mobile */
+  text-align: center; 
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
 
